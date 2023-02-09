@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notes{% endblock %}
+
+{% block body %}
+<div class="row justify-content-md-center">
+    <div class="col-10">
+        <h1>Les notes</h1>
+    </div>
+</div>
+<div class="row justify-content-md-center">
+    <div class="col-10">
+        <table class="table">
+            <thead>
+                <tr><th>etudiant</th><th>matiere</th><th>note</th></tr>
+            </thead>
+            <tbody>
+            {% for n in note %}
+                <tr>
+                    <td>{{ n.etudiant.username }}</td>
+                    <td>{{ n.matiere.libelle }}</td>
+                    <td>{{ n.valeur }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+    {% endblock %}

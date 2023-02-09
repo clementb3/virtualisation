@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonjour{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-1">
+    <p style="margin: 14px 0px; text-align: center">
+        <span style="color: #999999"><i class="fas fa-info-circle fa-3x"></i></span>
+    </p>
+    </div>
+    <div class="col-11">
+    <h1>Bonjour {{ aQui }} ! Nous sommes le {{ laDate | format_datetime(pattern="EEEE d MMMM") }}.</h1>
+    </div>
+    <div class="col-12">
+    <h2>Vous pouvez :</h2>
+        <div >
+            <div class="col-8 ">
+            <a href="{{ path('connexion') }}"><input type ="button" class="btn-primary btn" value="connexion"></a>
+            <a href="{{ path('utilisateur') }}"><input type ="button" class="btn-primary btn" value="Ajout manuel d'un utilisateur"></a>
+            <a href="{{ path('import utilisateur') }}"><input type ="button" class="btn-primary btn" value="Importation des utilisateur a partir d'un fichier"></a>
+            </div>
+            <div class="col-8">
+            <a href="{{ path('note') }}"><input type ="button" class="btn-primary btn" value="Ajout manuel d'une note"></a>
+            <a href="{{ path('import note') }}"><input type ="button" class="btn-primary btn" value="Importation des notes a partir d'un fichier"></a>
+            <a href="{{ path('matiere') }}"><input type ="button" class="btn-primary btn" value="Ajout manuel d'une matiere"></a>
+            <a href="{{ path('liste note') }}"><input type ="button" class="btn-primary btn" value="liste des notes"></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

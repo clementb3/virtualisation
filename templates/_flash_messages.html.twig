@@ -1,0 +1,38 @@
+{# read and display all flash messages, app.flashes cant only be read once #}
+{# Les messages sont un peu compactés (style) s'il y en a plusieurs on affiche le X de 
+   fermeture en haut, dans l'entête du modal, sinon on l'affiche dans le message d'alerte #}
+{% set flashes = app.flashes %}
+{% if flashes is not empty %}
+    <style>
+    #messagesFlash .modal-body { padding: 0px; }
+    #messagesFlash .modal-header { padding: 5px 10px; }
+    #messagesFlash .alert { margin: 0px; }
+    </style>
+    <div class="modal fade" id="messagesFlash" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          {% if flashes | length > 1 %}
+          <div class="modal-header">
+            {# <h5 class="modal-title">Info</h5> #}
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          {% endif %}
+          <div class="modal-body">
+            {% for label, messages in flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                        {% if flashes | length == 1 %}
+                            <button style="float: right" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+          </div>
+          {# <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+          </div> #}
+        </div>
+      </div>
+    </div>
+{% endif %}

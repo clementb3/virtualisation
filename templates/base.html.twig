@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Bienvenue !{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/UGA.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-icons.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/base.css')}}" />
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body class="container">
+    {% block header %}
+    <div id="bandeau" class="row">
+        <div class="col-md-3">
+            <a href="{{ path('accueil') }}" >
+            <img src="{{asset('img/LogoIUT-V-300x300.png')}}" alt="Logo UGA IUT"/>
+            </a>
+        </div>
+        <div class="col-md-9">
+            <div id="titre">
+                Bienvenue à l'IUT de Valence !
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block menu %}{% endblock %}
+    {{ include('_flash_messages.html.twig') }}
+    {% block body %}{% endblock %}
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Affichage d'éventuels messages
+            var modal = new bootstrap.Modal(document.getElementById('messagesFlash'), {'keyboard' : true, 'focus': true });
+            modal.show();
+        }}, false);
+    </script>
+    {% block javascripts %}
+    {% endblock %}
+</body>
+</html>

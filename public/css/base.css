@@ -1,0 +1,22 @@
+/* Feuille de style pour application de base Symfony  */
+
+body {
+	color: black;
+	background: white; 
+	font-family: Trebuchet MS, Cantarell, sans-serif;
+    margin: 5px auto;
+    width: 1200px;
+}
+
+#bandeau { border-bottom: medium solid #63579F; margin-bottom: 1em; }
+#bandeau img { height: 7em; }
+#titre { color: #2F3B53; margin-top: .7em; font-size: 2.5em; font-weight: bold; font-variant: small-caps; }
+
+h1 {
+    margin: 18px 0px;
+    padding: 10px 5px;
+	font-size: 1.2em;
+	color: white;
+	background: #FF4E02; 
+	text-align: center;
+}

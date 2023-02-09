@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonjour{% endblock %}
+{% form_theme form 'bootstrap_5_horizontal_layout.html.twig' %}
+{% block body %}
+<div class="row">
+    <div class="col-1">
+    <p style="margin: 14px 0px; text-align: center">
+        <span style="color: #999999"><i class="fas fa-info-circle fa-3x"></i></span>
+    </p>
+    </div>
+    <div class="col-12">
+    <h1>liste des utilisateur</h1>
+    </div>
+    <div class="col-12">
+        <ul>
+            {{ form(form) }}
+        </ul>
+    </div>
+</div>
+{% endblock %}

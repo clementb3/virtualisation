@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quelques icônes Font Awesome{% endblock %}
+
+{% block stylesheets %}
+<style>
+p.icons > i {
+    font-size: 2rem; color: blue;
+}
+</style>
+{% endblock %}
+{% block body %}
+<p></p>
+<p><b>Rappel :</b> Pour voir le code source de la page sous Firefox, tapez <code>Ctrl-U</code>.</p>
+
+<p class="icons">
+    <i class="bi-search"></i>
+    <i class="bi-search" style="font-size: 3rem; color: green;"></i>
+    <i class="bi-binoculars"></i>
+    <i class="bi-binoculars-fill" style="font-size: 3rem; color: #63579F;"></i>
+</p>
+
+<p class="icons">
+    <i class="bi-house"></i>
+    <i class="bi-house-fill"></i>
+    <i class="bi-box-arrow-left" style="color: red"></i>
+    <i class="bi-box-arrow-in-right" style="color: green"></i>
+    <i class="bi-door-closed"></i>
+    <i class="bi-door-closed-fill"></i>
+    <i class="bi-person"></i>
+    <i class="bi-person-fill"></i>
+</p>
+
+<p class="icons">
+    <i class="bi-info"></i>
+    <i class="bi-info-lg"></i>
+    <i class="bi-info-circle" style="color: #d63384"></i>
+    <i class="bi-info-circle-fill"></i>
+    <i class="bi-info-square"></i>
+    <i class="bi-info-square-fill" style="color: #d63384"></i>
+</p>
+<p class="icons">
+    <i class="bi-check" style="color: green;"></i>
+    <i class="bi-check-square" style="color: green;"></i>
+    <i class="bi-check-square-fill" style="color: green;"></i>
+    <i class="bi-check-circle" style="color: green;"></i>
+    <i class="bi-check-circle-fill" style="color: green;"></i>
+    <i class="bi-plus-circle" style="color: green;"></i>
+    <i class="bi-plus-circle-fill" style="color: green;"></i>
+    <i class="bi-x-circle" style="color: red;"></i>
+    <i class="bi-x-circle-fill" style="color: red;"></i>
+    <i class="bi-pencil" style="color: orange;"></i>
+    <i class="bi-pencil-fill" style="color: orange;"></i>
+    <i class="bi-recycle" style="color: orange;"></i>
+    <i class="bi-trash" style="color: red;"></i>
+    <i class="bi-trash-fill" style="color: red;"></i>
+</p>
+
+<p class="icons">
+    <i class="bi-chevron-up"></i>
+    <i class="bi-chevron-down"></i>
+    <i class="bi-chevron-right"></i>
+    <i class="bi-chevron-left"></i>
+    <i class="bi-arrow-up"></i>
+    <i class="bi-arrow-down"></i>
+    <i class="bi-arrow-right"></i>
+    <i class="bi-arrow-left"></i>
+</p>
+
+<p class="icons">
+</p>
+
+<p class="icons" style="text-align: center; font-size: 2em; margin-top: 2em;">
+    <i class="bi-arrow-right"></i>
+<a href="icons.html">Toutes les icônes en noir et blanc</a>
+    <i class="bi-arrow-left"></i>
+</p>
+<p class="icons" style="text-align: center; font-size: 2em; margin-top: 2em;">
+    <i class="bi-arrow-right"></i>
+<a href="https://icons.getbootstrap.com">Toutes les icônes sur le site officiel</a>
+    <i class="bi-arrow-left"></i>
+</p>
+{% endblock %}
